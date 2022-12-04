@@ -1,0 +1,46 @@
+{
+  "name": "discord",
+  "version": "0.0.1",
+  "description": "discord clone with electron and nuxt",
+  "main": "./dist/main/index.js",
+  "scripts": {
+    "dev": "node .electron-nuxt/dev.js",
+    "build": "node .electron-nuxt/build.js",
+    "preinstall": "node .electron-nuxt/check-engines.js",
+    "postinstall": "electron-builder install-app-deps "
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "ardasarico",
+  "homepage": "https://github.com/michalzaq12/electron-nuxt/blob/master/README.md",
+  "engines": {
+    "node": ">=14.14.9"
+  },
+  "resolutions": {
+    "@types/node": "14.14.9"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@xpda-dev/core": "^0.1.6",
+    "@xpda-dev/electron-builder": "^0.2.1",
+    "@xpda-dev/electron-launcher": "^0.3.0",
+    "@xpda-dev/webpack-step": "^0.1.6",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
+    "deepmerge": "^4.2.2",
+    "electron": "^16.0.5",
+    "electron-builder": "^22.14.5",
+    "electron-devtools-installer": "^3.2.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^6.0.1",
+    "nuxt": "^2.15.8",
+    "sass": "^1.32.6",
+    "sass-loader": "^10.1.1",
+    "vue-template-compiler": "^2.6.11",
+    "webpack-node-externals": "^3.0.0"
+  }
+}

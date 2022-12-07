@@ -1,182 +1,218 @@
 <template>
   <div class="sidebar">
-    <div class="sidebar__home sidebar-item">
-      <nuxt-link to="/" class="sidebar-button sidebar-button-home"
-        ><svg
-          class="homeIcon-r0w4ny"
-          aria-hidden="true"
-          role="img"
-          width="28"
-          height="20"
-          viewBox="0 0 28 20"
+    <Panel />
+    <div class="explore" v-if="$route.path === '/explore'">
+      <h1>Discover</h1>
+      <div class="explore__categories">
+        <nuxt-link class="explore__categories-link" to="/explore">
+          <svg
+            aria-hidden="true"
+            role="img"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z"
+            ></path>
+          </svg>
+          <p>Home</p></nuxt-link
         >
-          <path
-            fill="currentColor"
-            d="M23.0212 1.67671C21.3107 0.879656 19.5079 0.318797 17.6584 0C17.4062 0.461742 17.1749 0.934541 16.9708 1.4184C15.003 1.12145 12.9974 1.12145 11.0283 1.4184C10.819 0.934541 10.589 0.461744 10.3368 0.00546311C8.48074 0.324393 6.67795 0.885118 4.96746 1.68231C1.56727 6.77853 0.649666 11.7538 1.11108 16.652C3.10102 18.1418 5.3262 19.2743 7.69177 20C8.22338 19.2743 8.69519 18.4993 9.09812 17.691C8.32996 17.3997 7.58522 17.0424 6.87684 16.6135C7.06531 16.4762 7.24726 16.3387 7.42403 16.1847C11.5911 18.1749 16.408 18.1749 20.5763 16.1847C20.7531 16.3332 20.9351 16.4762 21.1171 16.6135C20.41 17.0369 19.6639 17.3997 18.897 17.691C19.3052 18.4993 19.7718 19.2689 20.3021 19.9945C22.6677 19.2689 24.8929 18.1364 26.8828 16.6466H26.8893C27.43 10.9731 25.9665 6.04728 23.0212 1.67671ZM9.68041 13.6383C8.39754 13.6383 7.34085 12.4453 7.34085 10.994C7.34085 9.54272 8.37155 8.34973 9.68041 8.34973C10.9893 8.34973 12.0395 9.54272 12.0187 10.994C12.0187 12.4453 10.9828 13.6383 9.68041 13.6383ZM18.3161 13.6383C17.0332 13.6383 15.9765 12.4453 15.9765 10.994C15.9765 9.54272 17.0124 8.34973 18.3161 8.34973C19.6184 8.34973 20.6751 9.54272 20.6543 10.994C20.6543 12.4453 19.6184 13.6383 18.3161 13.6383Z"
-          ></path></svg
-      ></nuxt-link>
-    </div>
-    <div class="sidebar__servers">
-      <div class="sidebar-item">
-        <nuxt-link class="sidebar-button" to="/server"></nuxt-link>
+        <nuxt-link class="explore__categories-link" to="/explore/gaming">
+          <svg
+            aria-hidden="true"
+            role="img"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g fill="none" fill-rule="evenodd">
+              <path
+                fill="currentColor"
+                d="M5.79335761,5 L18.2066424,5 C19.7805584,5 21.0868816,6.21634264 21.1990185,7.78625885 L21.8575059,17.0050826 C21.9307825,18.0309548 21.1585512,18.9219909 20.132679,18.9952675 C20.088523,18.9984215 20.0442685,19 20,19 C18.8245863,19 17.8000084,18.2000338 17.5149287,17.059715 L17,15 L7,15 L6.48507125,17.059715 C6.19999155,18.2000338 5.1754137,19 4,19 C2.97151413,19 2.13776159,18.1662475 2.13776159,17.1377616 C2.13776159,17.0934931 2.1393401,17.0492386 2.1424941,17.0050826 L2.80098151,7.78625885 C2.91311838,6.21634264 4.21944161,5 5.79335761,5 Z M14.5,10 C15.3284271,10 16,9.32842712 16,8.5 C16,7.67157288 15.3284271,7 14.5,7 C13.6715729,7 13,7.67157288 13,8.5 C13,9.32842712 13.6715729,10 14.5,10 Z M18.5,13 C19.3284271,13 20,12.3284271 20,11.5 C20,10.6715729 19.3284271,10 18.5,10 C17.6715729,10 17,10.6715729 17,11.5 C17,12.3284271 17.6715729,13 18.5,13 Z M6,9 L4,9 L4,11 L6,11 L6,13 L8,13 L8,11 L10,11 L10,9 L8,9 L8,7 L6,7 L6,9 Z"
+              ></path>
+              <rect width="24" height="24"></rect>
+            </g>
+          </svg>
+          <p>Gaming</p></nuxt-link
+        >
+        <nuxt-link class="explore__categories-link" to="/explore/test">
+          <svg
+            aria-hidden="true"
+            role="img"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M19.396 3.29898C19.016 3.01598 18.524 2.93098 18.07 3.06498L8.07 6.06498C7.435 6.25498 7 6.83998 7 7.50298V15.054C6.835 15.03 6.671 15.003 6.5 15.003C4.566 15.003 3 16.571 3 18.503C3 20.434 4.566 22.003 6.5 22.003C8.434 22.003 10 20.434 10 18.503V8.61798L17 6.51798V13.054C16.835 13.03 16.671 13.003 16.5 13.003C14.566 13.003 13 14.571 13 16.503C13 18.434 14.566 20.003 16.5 20.003C18.434 20.003 20 18.434 20 16.503V4.50298C20 4.02698 19.775 3.58198 19.396 3.29898Z"
+            ></path>
+          </svg>
+          <p>Music</p></nuxt-link
+        >
+        <nuxt-link class="explore__categories-link" to="/explore/test">
+          <svg
+            aria-hidden="true"
+            role="img"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M22.447 8.11002L12.447 3.11002C12.166 2.96902 11.834 2.96902 11.552 3.11002L1.552 8.11002C1.35 8.21002 1.197 8.38402 1.107 8.57302C1.046 8.69502 1 8.90202 1 9.00502V14.77C1 15.322 1.448 15.77 2 15.77C2.552 15.77 3 15.322 3 14.77V10.172L12.015 13.927L22.372 9.93302C22.737 9.78602 22.983 9.44002 22.999 9.04602C23.016 8.65202 22.799 8.28702 22.447 8.11002ZM12 16.005C11.869 16.005 11.738 15.979 11.615 15.928L5 13.172V16.185C5 16.564 5.214 16.91 5.553 17.08C5.7173 17.1621 5.88209 17.2461 6.04836 17.3308C7.61773 18.1306 9.31996 18.998 12 18.998C14.6812 18.998 16.3872 18.1284 17.956 17.3287C18.1208 17.2447 18.2842 17.1614 18.447 17.08C18.786 16.911 19 16.564 19 16.186V13.385L12.359 15.939C12.243 15.982 12.122 16.005 12 16.005ZM1 18.005C1 17.453 1.448 17.005 2 17.005C2.552 17.005 3 17.453 3 18.005V20.005C3 20.557 2.552 21.005 2 21.005C1.448 21.005 1 20.557 1 20.005V18.005Z"
+            ></path>
+          </svg>
+          <p>Education</p></nuxt-link
+        >
+        <nuxt-link class="explore__categories-link" to="/explore/test">
+          <svg
+            aria-hidden="true"
+            role="img"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18.6683 11.9964C19.5992 13.2208 20.3732 14.4331 20.9422 15.5701C22.5858 18.8593 22.0118 20.4688 21.2418 21.2398C20.895 21.5846 20.2596 21.9978 19.1951 21.9978C17.3645 21.9978 14.7478 20.7553 12.0004 18.6683C9.25198 20.7553 6.63527 21.9978 4.80569 21.9978C3.74111 21.9978 3.10478 21.5846 2.75896 21.2398C1.98792 20.4677 1.41392 18.8593 3.05853 15.5701C3.62751 14.4331 4.40257 13.2218 5.33245 11.9964C2.51569 8.28291 1.00176 4.51719 2.75896 2.75898C3.10578 2.41316 3.74111 2 4.80569 2C6.63628 2 9.25298 3.24251 12.0004 5.32944C14.7488 3.24251 17.3655 2 19.1951 2C20.2596 2 20.895 2.41216 21.2418 2.75898C22.999 4.51618 21.4851 8.28191 18.6683 11.9964ZM19.8203 4.18042C19.6806 4.03969 19.4032 4.01053 19.1951 4.01053C18.0481 4.01053 15.9933 4.9203 13.6209 6.64835C15.0262 7.86472 16.2346 9.08512 17.3655 10.395C19.752 7.13188 20.3541 4.71422 19.8203 4.18042ZM14.1325 14.1316C14.8654 13.3987 15.5108 12.689 16.0928 12.0024C15.4876 11.2856 14.8342 10.5689 14.1325 9.86621C13.4128 9.14744 12.701 8.51312 12.0004 7.92202C11.2997 8.51312 10.588 9.14744 9.86821 9.86621C9.16653 10.5689 8.51311 11.2856 7.90794 12.0024C8.48999 12.689 9.13637 13.3987 9.86821 14.1316C10.588 14.8513 11.2997 15.4856 12.0004 16.0747C12.701 15.4856 13.4128 14.8513 14.1325 14.1316ZM4.80569 4.01053C4.5986 4.01053 4.32115 4.03969 4.18142 4.18042C3.64661 4.71422 4.24977 7.13088 6.63628 10.394C7.83556 9.00469 9.05696 7.79435 10.3799 6.64735C8.00645 4.9203 5.95269 4.01053 4.80569 4.01053ZM4.18041 19.8183C4.32014 19.9581 4.5976 19.9872 4.80569 19.9872C5.95269 19.9872 8.00746 19.0785 10.3799 17.3514C8.98357 16.1421 7.7873 14.9348 6.6413 13.6078C5.92053 14.593 5.31133 15.56 4.85695 16.4688C3.79539 18.5909 3.9502 19.5881 4.18041 19.8183ZM19.1941 19.9872C19.4021 19.9872 19.6796 19.9581 19.8193 19.8183C20.0495 19.5881 20.2044 18.5919 19.1428 16.4688C18.6884 15.559 18.0792 14.592 17.3584 13.6078C16.2114 14.9358 15.0152 16.1431 13.6199 17.3514C15.9933 19.0785 18.0471 19.9872 19.1941 19.9872ZM14.0109 11.9984C14.0109 13.1088 13.1108 14.0089 12.0004 14.0089C10.89 14.0089 9.98984 13.1088 9.98984 11.9984C9.98984 10.888 10.89 9.98784 12.0004 9.98784C13.1108 9.98784 14.0109 10.888 14.0109 11.9984Z"
+            ></path>
+          </svg>
+          <p>Science & Tech</p></nuxt-link
+        >
+        <nuxt-link class="explore__categories-link" to="/explore/test">
+          <svg
+            aria-hidden="true"
+            role="img"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M16.781 2.27293L14.081 5.7126H9.919L7.219 2.27293L8.781 1L12 5.10008L15.219 1L16.781 2.27293ZM4 6.73175H20C21.1 6.73175 22 7.649 22 8.77007V18.9617C22 20.0828 21.1 21 20 21H4C2.9 21 2 20.0828 2 18.9617V8.77007C2 7.649 2.9 6.73175 4 6.73175ZM4 18.9617H16V8.77007H4V18.9617ZM18 16.4138C18 16.9764 18.448 17.4329 19 17.4329C19.552 17.4329 20 16.9764 20 16.4138C20 15.8512 19.552 15.3946 19 15.3946C18.448 15.3946 18 15.8512 18 16.4138ZM18 11.318C18 11.8806 18.448 12.3371 19 12.3371C19.552 12.3371 20 11.8806 20 11.318C20 10.7554 19.552 10.2988 19 10.2988C18.448 10.2988 18 10.7554 18 11.318Z"
+            ></path>
+          </svg>
+          <p>Entertainment</p>
+        </nuxt-link>
+        <nuxt-link class="explore__categories-link" to="/explore/test">
+          <svg
+            aria-hidden="true"
+            role="img"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M13.25 18L13.25 6L11.75 6L11.75 18L13.25 18Z"
+              fill="currentColor"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7 12.75C6.30964 12.75 5.75 13.3096 5.75 14V18H4.25V14C4.25 12.4812 5.48122 11.25 7 11.25H18C19.5188 11.25 20.75 12.4812 20.75 14V18H19.25V14C19.25 13.3096 18.6904 12.75 18 12.75H7Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M12.5 7C11.1193 7 10 5.88071 10 4.5C10 3.11929 11.1193 2 12.5 2C13.8807 2 15 3.11929 15 4.5C15 5.88071 13.8807 7 12.5 7Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M20 22C18.6193 22 17.5 20.8807 17.5 19.5C17.5 18.1193 18.6193 17 20 17C21.3807 17 22.5 18.1193 22.5 19.5C22.5 20.8807 21.3807 22 20 22Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M12.5 22C11.1193 22 10 20.8807 10 19.5C10 18.1193 11.1193 17 12.5 17C13.8807 17 15 18.1193 15 19.5C15 20.8807 13.8807 22 12.5 22Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M5 22C3.61929 22 2.5 20.8807 2.5 19.5C2.5 18.1193 3.61929 17 5 17C6.38071 17 7.5 18.1193 7.5 19.5C7.5 20.8807 6.38071 22 5 22Z"
+              fill="currentColor"
+            ></path>
+          </svg>
+          <p>Student Hubs</p></nuxt-link
+        >
       </div>
-    </div>
-    <div class="sidebar-item">
-      <button class="sidebar-button sidebar-button-green green-create">
-        <svg
-          class="circleIcon-3489FI"
-          aria-hidden="true"
-          role="img"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill="currentColor"
-            d="M20 11.1111H12.8889V4H11.1111V11.1111H4V12.8889H11.1111V20H12.8889V12.8889H20V11.1111Z"
-          ></path>
-        </svg>
-      </button>
-    </div>
-    <div class="sidebar-item">
-      <nuxt-link
-        active-class="green-active"
-        to="/explore"
-        class="sidebar-button sidebar-button-green"
-        ><svg
-          aria-hidden="true"
-          role="img"
-          class="circleIcon-3489FI"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-        >
-          <path
-            fill="currentColor"
-            d="M12 10.9C11.39 10.9 10.9 11.39 10.9 12C10.9 12.61 11.39 13.1 12 13.1C12.61 13.1 13.1 12.61 13.1 12C13.1 11.39 12.61 10.9 12 10.9ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM14.19 14.19L6 18L9.81 9.81L18 6L14.19 14.19Z"
-          ></path></svg
-      ></nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
+import Panel from "../components/Panel.vue";
 export default {
-  name: "sidebar",
+  name: "navigation",
+  components: {
+    Panel,
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .sidebar {
-  gap: 8px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 72px;
-  padding-top: 32px;
-  height: calc(100vh - 32px);
-  background: #202225;
-  overflow: scroll;
-  &::-webkit-scrollbar {
-    display: none;
+  width: 240px;
+  height: 100vh;
+  background: #2f3136;
+}
+.explore {
+  display: flex;
+  flex-direction: column;
+  h1 {
+    font-size: 24px;
+    margin-left: 16px;
+    color: #fff;
   }
-  &__servers {
-    width: 100%;
+  &__categories {
+    display: flex;
     flex-direction: column;
-    display: flex;
-    align-items: center;
-    &::before {
-      content: "";
-      width: 32px;
-      height: 2px;
+    width: calc(100% - 16px);
+    margin: 0 8px;
+    gap: 2px;
+    &-link {
       display: flex;
-      background: #373a3f;
-      margin-bottom: 8px;
-      border-radius: 2px;
-    }
-  }
-  &-item {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 48px;
-  }
-  &-button {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
-    border: none;
-    background: #36393f;
-    transition: 0.3s;
-
-    &-home {
+      align-items: center;
+      width: 100%;
+      height: 42px;
+      gap: 12px;
+      text-decoration: none;
+      border-radius: 4px;
       svg {
+        margin-left: 12px;
         path {
-          fill: #dcddde;
+          fill: #b9bbbe;
         }
       }
-    }
-    &:hover {
-      border-radius: 16px;
-      background: #4b5eeb;
-      &::after {
-        height: 30px;
-        left: 0;
-        transition: 0.3s;
-      }
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      left: -5px;
-      height: 25px;
-      width: 4px;
-      border-radius: 0 2px 2px 0;
-      background: #fff;
-    }
-    &-green {
-      cursor: pointer !important;
-      svg {
-        path {
-          fill: #3ba55d;
-        }
+      p {
+        font-size: 14px;
+        color: #b9bbbe;
+        font-weight: 500;
       }
       &:hover {
-        background: #3ba55d;
-        svg {
-          path {
-            fill: #fff;
-          }
+        background: #47494e;
+      }
+    }
+    .nuxt-link-active {
+      background: #4b5eeb;
+      * {
+        color: #fff;
+        path {
+          fill: #fff;
         }
       }
     }
-  }
-}
-.nuxt-link-exact-active,
-.green-active {
-  border-radius: 16px;
-  &::after {
-    height: 40px !important;
-    left: 0;
-  }
-}
-.nuxt-link-exact-active {
-  background: #4b5eeb;
-}
-.green-active {
-  background: #3ba55d;
-  svg {
-    path {
-      fill: #fff;
-    }
-  }
-}
-.green-create {
-  &::after {
-    opacity: 0 !important;
   }
 }
 </style>

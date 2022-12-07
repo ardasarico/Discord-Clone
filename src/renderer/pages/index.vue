@@ -2,14 +2,9 @@
   <div></div>
 </template>
 <script>
-
 export default {
-  name: 'IndexPage',
-  components: {
-  },
-}
+  name: "IndexPage",
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

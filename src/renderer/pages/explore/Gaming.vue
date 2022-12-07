@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <nuxt-child />
-  </div>
+  <div></div>
 </template>
 
 <script>
 export default {
-  name: "explore",
+  name: "gaming",
 };
 </script>
 

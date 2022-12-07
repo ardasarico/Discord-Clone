@@ -1,12 +1,14 @@
 <template>
   <div>
-    <nuxt-child />
+    <Hero />
   </div>
 </template>
 
 <script>
+import Hero from "../../components/explore/Hero";
 export default {
-  name: "explore",
+  name: "Home",
+  components: { Hero },
 };
 </script>
 

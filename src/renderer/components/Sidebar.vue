@@ -163,7 +163,9 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
+  min-width: 240px;
   width: 240px;
+  max-width: 240px;
   height: 100vh;
   background: #2f3136;
 }

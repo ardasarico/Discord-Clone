@@ -79,7 +79,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 72px;
   width: 72px;
+  max-width: 72px;
   padding-top: 32px;
   height: calc(100vh - 32px);
   background: #202225;

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <nuxt-child />
   </div>
 </template>
@@ -10,4 +10,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.container {
+  width: calc(100% - 64px);
+  margin: 0 32px;
+  height: 100vh;
+  position: relative;
+}
+</style>

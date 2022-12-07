@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar">
     <Panel />
-    <div class="explore" v-if="$route.path === '/explore'">
+    <div class="explore" v-if="$route.path.match(/\/explore\/*/g)">
       <h1>Discover</h1>
       <div class="explore__categories">
         <nuxt-link class="explore__categories-link" to="/explore">
@@ -37,7 +37,7 @@
           </svg>
           <p>Gaming</p></nuxt-link
         >
-        <nuxt-link class="explore__categories-link" to="/explore/test">
+        <nuxt-link class="explore__categories-link" to="/explore/music">
           <svg
             aria-hidden="true"
             role="img"
@@ -52,7 +52,7 @@
           </svg>
           <p>Music</p></nuxt-link
         >
-        <nuxt-link class="explore__categories-link" to="/explore/test">
+        <nuxt-link class="explore__categories-link" to="/explore/education">
           <svg
             aria-hidden="true"
             role="img"
@@ -69,7 +69,7 @@
           </svg>
           <p>Education</p></nuxt-link
         >
-        <nuxt-link class="explore__categories-link" to="/explore/test">
+        <nuxt-link class="explore__categories-link" to="/explore/science">
           <svg
             aria-hidden="true"
             role="img"
@@ -86,7 +86,7 @@
           </svg>
           <p>Science & Tech</p></nuxt-link
         >
-        <nuxt-link class="explore__categories-link" to="/explore/test">
+        <nuxt-link class="explore__categories-link" to="/explore/entertainment">
           <svg
             aria-hidden="true"
             role="img"
@@ -103,7 +103,7 @@
           </svg>
           <p>Entertainment</p>
         </nuxt-link>
-        <nuxt-link class="explore__categories-link" to="/explore/test">
+        <nuxt-link class="explore__categories-link" to="/explore/student">
           <svg
             aria-hidden="true"
             role="img"
@@ -204,7 +204,7 @@ export default {
         background: #47494e;
       }
     }
-    .nuxt-link-active {
+    .nuxt-link-exact-active {
       background: #4b5eeb;
       * {
         color: #fff;

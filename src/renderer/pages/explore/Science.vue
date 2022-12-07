@@ -1,10 +1,10 @@
 <template>
-  <div>asdasd</div>
+  <div></div>
 </template>
 
 <script>
 export default {
-  name: "gaming",
+  name: "Science",
 };
 </script>
 

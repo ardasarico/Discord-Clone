@@ -1,6 +1,10 @@
 <template>
   <div>
-    <Hero test="test" />
+    <Hero
+      title="Find your community on Discord"
+      subtitle="From gaming, to music, to learning, there's a place for you"
+      input="Explore communities"
+    />
   </div>
 </template>
 

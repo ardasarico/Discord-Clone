@@ -8,8 +8,14 @@
         type="text"
         name="input"
         :placeholder="$props.input"
+        @focus="onFocus"
+        @blur="onBlur"
       />
-      <button v-if="this.Search.length > 0" class="hero__input-clear">
+      <button
+        v-if="this.Search.length > 0"
+        class="hero__input-clear"
+        v-on:click="clear"
+      >
         <svg
           class="clearIcon-TMIIUa closeIcon-BMGxx0"
           aria-hidden="true"
@@ -24,7 +30,11 @@
           ></path>
         </svg>
       </button>
-      <p class="hero__input-info" v-if="this.Search.length > 1">
+      <p
+        class="hero__input-info"
+        v-if="this.Search.length > 1"
+        :style="{ opacity: inputBackground }"
+      >
         "ENTER" to Search
       </p>
     </div>
@@ -38,7 +48,19 @@ export default {
   data() {
     return {
       Search: "",
+      inputBackground: "0",
     };
+  },
+  methods: {
+    onFocus() {
+      this.inputBackground = "1";
+    },
+    onBlur() {
+      this.inputBackground = "0";
+    },
+    clear() {
+      this.Search = "";
+    },
   },
 };
 </script>
@@ -88,9 +110,6 @@ export default {
       &:focus {
         outline: 2px solid #cbd2ff;
         outline-offset: 1px;
-        .hero__input-info {
-          opacity: 1 !important;
-        }
       }
     }
     &-clear {
@@ -107,6 +126,13 @@ export default {
       svg {
         path {
           fill: #47494e;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            fill: #000;
+          }
         }
       }
     }
